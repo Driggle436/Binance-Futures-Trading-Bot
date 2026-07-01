@@ -1,0 +1,53 @@
+2026-07-01 12:56:28,232 | INFO | Order Request -> Symbol=BTCUSDT, Side=BUY, Type=MARKET, Qty=0.001, Price=None
+2026-07-01 12:56:29,208 | INFO | Order Response -> {'orderId': 18182071954, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJfc20be37e3433eb110c55d', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782890788005}
+2026-07-01 12:59:31,315 | INFO | REQUEST: symbol=BTCUSDT, side=BUY, type=MARKET, quantity=0.001, price=None
+2026-07-01 12:59:32,382 | INFO | RESPONSE: {'orderId': 18182639676, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ4aeec0a14f5a55bed5cf51', 'price': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782890971275}
+2026-07-01 13:00:27,066 | INFO | REQUEST: symbol=BTCUSDT, side=SELL, type=LIMIT, quantity=0.001, price=70000.0
+2026-07-01 13:00:28,123 | INFO | RESPONSE: {'orderId': 18182801628, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ7d0d8b9bde14186deb7934', 'price': '70000.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1782891027013}
+2026-07-01 13:02:29,241 | INFO | REQUEST -> Symbol=BTCUSDT, Side=BUY, Type=MARKET, Qty=0.001, Price=None
+2026-07-01 13:02:31,310 | INFO | RESPONSE -> {'orderId': 18183192143, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-Cb7ytekJa18b8a0ebb6b78809f1794', 'price': '0.00', 'avgPrice': '58675.420000', 'origQty': '0.0010', 'executedQty': '0.0010', 'cumQuote': '58.675420', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1782891148973, 'updateTime': 1782891148974}
+2026-07-01 20:50:56,983 | INFO | Fetched 4 recent orders
+2026-07-01 22:45:18,842 | ERROR | APIError(code=-1121): Invalid symbol.
+Traceback (most recent call last):
+  File "C:\Users\Dell\.vscode\TradingBot\bot\orders.py", line 49, in get_recent_orders
+    orders = client.futures_get_all_orders(
+        symbol=symbol,
+        limit=limit
+    )
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 8109, in futures_get_all_orders
+    return self._request_futures_api("get", "allOrders", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1121): Invalid symbol.
+2026-07-01 22:45:40,564 | INFO | Fetched 4 recent orders
+2026-07-01 22:55:19,619 | ERROR | APIError(code=-1121): Invalid symbol.
+Traceback (most recent call last):
+  File "C:\Users\Dell\.vscode\TradingBot\bot\orders.py", line 49, in get_recent_orders
+    orders = client.futures_get_all_orders(
+        symbol=symbol,
+        limit=limit
+    )
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 8109, in futures_get_all_orders
+    return self._request_futures_api("get", "allOrders", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\.vscode\TradingBot\venv\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1121): Invalid symbol.
+2026-07-01 22:55:38,384 | INFO | Fetched 4 recent orders
+2026-07-01 23:02:28,469 | INFO | REQUEST -> Symbol=BTCUSDT, Side=BUY, Type=MARKET, Qty=0.001, Price=None
+2026-07-01 23:02:30,597 | INFO | RESPONSE -> {'orderId': 18287786134, 'symbol': 'BTCUSDT', 'status': 'FILLED', 'clientOrderId': 'x-Cb7ytekJ149c81747bdeafb29fe59a', 'price': '0.00', 'avgPrice': '60137.200000', 'origQty': '0.0010', 'executedQty': '0.0010', 'cumQuote': '60.137200', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1782927149128, 'updateTime': 1782927149128}
+2026-07-01 23:02:49,074 | INFO | REQUEST -> Symbol=BTCUSDT, Side=SELL, Type=LIMIT, Qty=0.001, Price=70000.0
+2026-07-01 23:02:51,395 | INFO | RESPONSE -> {'orderId': 18287856477, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJce0aaaadb526b3472093b', 'price': '70000.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'time': 1782927169864, 'updateTime': 1782927169864}
